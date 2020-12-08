@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <form #nform ="ngForm" (ngSubmit) = get(nform.value)>
+        <h1>enter the index</h1>
+        <input type="number" class="form-control" placeholder="enter index"/>
+
+        <input type="submit" class="btn btn-success" value="Submit"/>
+    </form>
+    <!-- <h1>{{get(i)}}</h1> -->
+
+        <button (click) = "ques1()">Ques1</button>
+        <button (click) = "ques2()">Ques2</button>
+        <button (click) = "ques3()">Ques3</button>
+        <button (click) = "ques4()">Ques4</button>
+    </body>
+</html>

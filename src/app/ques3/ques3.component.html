@@ -1,0 +1,36 @@
+       
+<form #numberForm="ngForm" class="container mt-3" (ngSubmit)="logValue()">
+    <div class="row justify-content-center">
+      <div class="col-6">
+          <button type="button" class="btn btn-primary mb-2" (click)="addNumber()">Add Number</button>
+        <section class="container border mb-4 p-3" *ngFor="let number of numbers; let i = index;">
+          <div class="row">
+           
+            <div class="col-6 text-right">
+                <button type="button" class="btn btn-danger btn-sm" (click)="removeNumber(i)">Remove</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" class="form-control" [(ngModel)]="number.number" name="number_{{number.id}}" placeholder="enter phone number"/>
+                  </div>
+            </div>
+            
+            
+          </div>
+        </section>
+  
+        <div class="text-right">
+            <input type="submit" class="btn btn-success" value="Submit"/>
+        </div>
+        
+      </div>
+    </div>
+  
+  </form>
+        <button (click) = "ques1()">Ques1</button>
+        <button (click) = "ques2()">Ques2</button>
+        <button (click) = "ques3()">Ques3</button>
+        <button (click) = "ques4()">Ques4</button>
